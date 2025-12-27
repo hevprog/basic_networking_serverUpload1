@@ -22,7 +22,7 @@ int main(){
     address.host = ENET_HOST_ANY;
     address.port = 3344;
 
-    server = enet_host_create(&address,1,1,1,1);
+    server = enet_host_create(&address,32,2,0,0);
 
 
     ENetEvent event;

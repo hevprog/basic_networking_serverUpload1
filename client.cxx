@@ -11,7 +11,7 @@ int main(){
 
     enet_address_set_host(&address,"34.122.23.53");
     address.port = 3344;
-    client = enet_host_create(NULL,1,1,0,0);
+    client = enet_host_create(NULL,32,2,0,0);
 
     peer = enet_host_connect(client,&address,1,0);
 
