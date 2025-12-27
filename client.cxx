@@ -9,7 +9,7 @@ int main(){
     ENetHost *client;
     ENetPeer *peer;
 
-    enet_address_set_host(&address,"localhost");
+    enet_address_set_host(&address,"136.111.142.235");
     address.port = 3344;
     client = enet_host_create(NULL,1,1,0,0);
 
