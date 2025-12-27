@@ -1,5 +1,0 @@
-Primary learning resource
-https://github.com/zpl-c/enet
-
-Secondary learning resource
-http://enet.bespin.org/Tutorial.html

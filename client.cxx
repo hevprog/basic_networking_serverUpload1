@@ -9,20 +9,20 @@ int main(){
     ENetHost *client;
     ENetPeer *peer;
 
-    enet_address_set_host(&address,"136.111.142.235");
+    enet_address_set_host(&address,"34.122.23.53");
     address.port = 3344;
     client = enet_host_create(NULL,1,1,0,0);
 
     peer = enet_host_connect(client,&address,1,0);
 
     ENetEvent event;
-    if(enet_host_service(client,&event,100)>0 && event.type == ENET_EVENT_TYPE_CONNECT){
+    if(enet_host_service(client,&event,5000)>0 && event.type == ENET_EVENT_TYPE_CONNECT){
         printf("Connected success\n");
     }
     else{
         printf("Connection unsuccessful\n");
     }
-    while(enet_host_service(client,&event,1000)>0){
+    while(enet_host_service(client,&event,5000)>0){
         switch (event.type)
         {
         case ENET_EVENT_TYPE_DISCONNECT_TIMEOUT:
