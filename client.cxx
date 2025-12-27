@@ -16,7 +16,7 @@ int main(){
     peer = enet_host_connect(client,&address,1,0);
 
     ENetEvent event;
-    if(enet_host_service(client,&event,100)>0 && event.type == ENET_EVENT_TYPE_CONNECT){
+    if(enet_host_service(client,&event,1000)>0 && event.type == ENET_EVENT_TYPE_CONNECT){
         printf("Connected success\n");
     }
     else{
